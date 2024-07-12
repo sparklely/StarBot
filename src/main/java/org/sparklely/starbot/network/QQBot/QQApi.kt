@@ -10,7 +10,7 @@ class QQApi {
 
     private var appId:String = ""
     private var clientSecret:String = ""
-    private var appAccessToken:Map<String,Any> = HashMap<String,String>()
+    private var appAccessToken:MutableMap<String,String> =  mutableMapOf()
 
     fun login(appId:String,clientSecret:String){
         this.appId=appId

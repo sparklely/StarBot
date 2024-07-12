@@ -1,0 +1,6 @@
+requests
+lxml
+urllib.parse
+xml
+subprocess
+shutil
