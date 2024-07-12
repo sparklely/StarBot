@@ -1,7 +1,7 @@
 package org.sparklely.starbot;
 
 import com.google.gson.Gson;
-import org.sparklely.starbot.util.LibraryLoader;
+import org.sparklely.starbot.util.library.LibraryLoader;
 
 public class Main {
     public static void main(String[] args) {
