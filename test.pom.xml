@@ -46,15 +46,12 @@
                         </goals>
                         <configuration>
                             <filters>
-                                <!-- 排除 Kotlin,gson,okhttp 依赖 -->
+                                <!-- 包含所有依赖 -->
                                 <filter>
                                     <artifact>*:*</artifact>
-                                    <excludes>
-                                        <exclude>kotlin/**</exclude>
-                                        <exclude>com/google/**</exclude>
-                                        <exclude>okhttp3/**</exclude>
-                                        <exclude>okio/**</exclude>
-                                    </excludes>
+                                    <includes>
+                                        <include>**</include>
+                                    </includes>
                                 </filter>
                             </filters>
                             <transformers>
@@ -77,6 +74,13 @@
                         <phase>compile</phase>
                         <goals>
                             <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>test-compile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>test-compile</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -102,6 +106,13 @@
                         <phase>compile</phase>
                         <goals>
                             <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>testCompile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>testCompile</goal>
                         </goals>
                     </execution>
                 </executions>
