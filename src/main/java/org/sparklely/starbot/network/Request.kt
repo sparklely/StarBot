@@ -36,7 +36,7 @@ class Request {
         url: String,
         query: Map<String, String> = hashMapOf(),
         header: Map<String, String> = hashMapOf(),
-        data: Map<String,Objects> = hashMapOf()
+        data: Map<String,Any> = hashMapOf()
     ):HttpResponse<String> {
         var allURL = "$url?"
         for (key in query.keys) {
